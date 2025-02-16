@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="BromoAirlines" Class="DataBaseDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=LAPTOP-DENT5RFJ;Initial Catalog=BromoAirlines;Integrated Security=True;Trust Server Certificate=True" SettingsObjectName="BromoAirlines.Properties.Settings" SettingsPropertyName="BromoAirlinesConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Akun" Member="Akuns">
+    <Type Name="Akun">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Username" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="Nama" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="TanggalLahir" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="NomorTelepon" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="MerupakanAdmin" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="Akun_TransaksiHeader" Member="TransaksiHeaders" ThisKey="ID" OtherKey="AkunID" Type="TransaksiHeader" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Bandara" Member="Bandaras">
+    <Type Name="Bandara">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Nama" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="KodeIATA" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="Kota" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="NegaraID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="JumlahTerminal" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Alamat" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="Bandara_JadwalPenerbangan" Member="JadwalPenerbangans" ThisKey="ID" OtherKey="BandaraKeberangkatanID" Type="JadwalPenerbangan" />
+      <Association Name="Bandara_JadwalPenerbangan1" Member="JadwalPenerbangans1" ThisKey="ID" OtherKey="BandaraTujuanID" Type="JadwalPenerbangan" />
+      <Association Name="Negara_Bandara" Member="Negara" ThisKey="NegaraID" OtherKey="ID" Type="Negara" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.JadwalPenerbangan" Member="JadwalPenerbangans">
+    <Type Name="JadwalPenerbangan">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="KodePenerbangan" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="BandaraKeberangkatanID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="BandaraTujuanID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MaskapaiID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TanggalWaktuKeberangkatan" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="DurasiPenerbangan" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="HargaPerTiket" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Association Name="JadwalPenerbangan_PerubahanStatusJadwalPenerbangan" Member="PerubahanStatusJadwalPenerbangans" ThisKey="ID" OtherKey="JadwalPenerbanganID" Type="PerubahanStatusJadwalPenerbangan" />
+      <Association Name="JadwalPenerbangan_TransaksiHeader" Member="TransaksiHeaders" ThisKey="ID" OtherKey="JadwalPenerbanganID" Type="TransaksiHeader" />
+      <Association Name="Bandara_JadwalPenerbangan" Member="Bandara" ThisKey="BandaraKeberangkatanID" OtherKey="ID" Type="Bandara" IsForeignKey="true" />
+      <Association Name="Bandara_JadwalPenerbangan1" Member="Bandara1" ThisKey="BandaraTujuanID" OtherKey="ID" Type="Bandara" IsForeignKey="true" />
+      <Association Name="Maskapai_JadwalPenerbangan" Member="Maskapai" ThisKey="MaskapaiID" OtherKey="ID" Type="Maskapai" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.KodePromo" Member="KodePromos">
+    <Type Name="KodePromo">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Kode" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="PersentaseDiskon" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="MaksimumDiskon" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="BerlakuSampai" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="Deskripsi" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="KodePromo_TransaksiHeader" Member="TransaksiHeaders" ThisKey="ID" OtherKey="KodePromoID" Type="TransaksiHeader" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Maskapai" Member="Maskapais">
+    <Type Name="Maskapai">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Nama" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="Perusahaan" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="JumlahKru" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Deskripsi" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="Maskapai_JadwalPenerbangan" Member="JadwalPenerbangans" ThisKey="ID" OtherKey="MaskapaiID" Type="JadwalPenerbangan" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Negara" Member="Negaras">
+    <Type Name="Negara">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Nama" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="IbukotaNegara" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Association Name="Negara_Bandara" Member="Bandaras" ThisKey="ID" OtherKey="NegaraID" Type="Bandara" />
+    </Type>
+  </Table>
+  <Table Name="dbo.StatusPenerbangan" Member="StatusPenerbangans">
+    <Type Name="StatusPenerbangan">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Nama" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Association Name="StatusPenerbangan_PerubahanStatusJadwalPenerbangan" Member="PerubahanStatusJadwalPenerbangans" ThisKey="ID" OtherKey="StatusPenerbanganID" Type="PerubahanStatusJadwalPenerbangan" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PerubahanStatusJadwalPenerbangan" Member="PerubahanStatusJadwalPenerbangans">
+    <Type Name="PerubahanStatusJadwalPenerbangan">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="JadwalPenerbanganID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="StatusPenerbanganID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="WaktuPerubahanTerjadi" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="PerkiraanDurasiDelay" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="JadwalPenerbangan_PerubahanStatusJadwalPenerbangan" Member="JadwalPenerbangan" ThisKey="JadwalPenerbanganID" OtherKey="ID" Type="JadwalPenerbangan" IsForeignKey="true" />
+      <Association Name="StatusPenerbangan_PerubahanStatusJadwalPenerbangan" Member="StatusPenerbangan" ThisKey="StatusPenerbanganID" OtherKey="ID" Type="StatusPenerbangan" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TransaksiDetail" Member="TransaksiDetails">
+    <Type Name="TransaksiDetail">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TransaksiHeaderID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TitelPenumpang" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="NamaLengkapPenumpang" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Association Name="TransaksiHeader_TransaksiDetail" Member="TransaksiHeader" ThisKey="TransaksiHeaderID" OtherKey="ID" Type="TransaksiHeader" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TransaksiHeader" Member="TransaksiHeaders">
+    <Type Name="TransaksiHeader">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="AkunID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TanggalTransaksi" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="JadwalPenerbanganID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="JumlahPenumpang" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TotalHarga" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="KodePromoID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="TransaksiHeader_TransaksiDetail" Member="TransaksiDetails" ThisKey="ID" OtherKey="TransaksiHeaderID" Type="TransaksiDetail" />
+      <Association Name="Akun_TransaksiHeader" Member="Akun" ThisKey="AkunID" OtherKey="ID" Type="Akun" IsForeignKey="true" />
+      <Association Name="JadwalPenerbangan_TransaksiHeader" Member="JadwalPenerbangan" ThisKey="JadwalPenerbanganID" OtherKey="ID" Type="JadwalPenerbangan" IsForeignKey="true" />
+      <Association Name="KodePromo_TransaksiHeader" Member="KodePromo" ThisKey="KodePromoID" OtherKey="ID" Type="KodePromo" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

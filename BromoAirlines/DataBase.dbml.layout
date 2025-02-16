@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 14, 12.625" name="DataBase">
+  <DataContextMoniker Name="/DataBaseDataContext" />
+  <nestedChildShapes>
+    <classShape Id="eb353484-5822-47d7-b46f-be4c152c47dc" absoluteBounds="6.25, 10.25, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/DataBaseDataContext/Akun" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b7ac4a15-e531-4c80-b1f7-b05c57759151" absoluteBounds="6.265, 10.71, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="cfa1533b-ce6d-4b80-8563-7a45c94fc418" absoluteBounds="3.5, 3.75, 2, 2.155499674479167">
+      <DataClassMoniker Name="/DataBaseDataContext/Bandara" />
+      <nestedChildShapes>
+        <elementListCompartment Id="33aa07db-a041-4d1f-bb6e-c717fe1aea93" absoluteBounds="3.515, 4.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4b163602-579e-4f4f-957c-e1e43929b915" absoluteBounds="6.25, 3.625, 2, 2.347801106770834">
+      <DataClassMoniker Name="/DataBaseDataContext/JadwalPenerbangan" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2b2f9689-d6f6-42ec-a874-283ce2677ab2" absoluteBounds="6.265, 4.085, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="efb7dfbc-bf41-4031-a4ed-591fcab4006b" absoluteBounds="6.25, 7.5, 2, 1.9631982421874996">
+      <DataClassMoniker Name="/DataBaseDataContext/KodePromo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0f45886e-0efa-444a-999a-b34128ad87e0" absoluteBounds="6.265, 7.96, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c3832e4b-bd09-4192-a8d0-8fa52f216f25" absoluteBounds="3.5, 1, 2, 1.7708968098958329">
+      <DataClassMoniker Name="/DataBaseDataContext/Maskapai" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f9bdbff7-c76f-4802-ad14-f829227d0a4f" absoluteBounds="3.515, 1.46, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0254010f-2208-47ca-830f-29fc6c209861" absoluteBounds="0.75, 4.125, 2, 1.3862939453124996">
+      <DataClassMoniker Name="/DataBaseDataContext/Negara" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2143b9da-09fa-48c7-a776-3e53a01039a1" absoluteBounds="0.765, 4.585, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5140cd06-163c-4f53-a374-697765e348db" absoluteBounds="6.25, 1.25, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/DataBaseDataContext/StatusPenerbangan" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9d3ad9b4-ec8c-401c-b427-505af9559ec1" absoluteBounds="6.265, 1.71, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4924ea5e-b9b0-40f1-a51b-6fa115b6aee6" absoluteBounds="9, 4, 2, 1.7708968098958326">
+      <DataClassMoniker Name="/DataBaseDataContext/PerubahanStatusJadwalPenerbangan" />
+      <nestedChildShapes>
+        <elementListCompartment Id="57138a98-95dd-476d-8abf-151663591ca5" absoluteBounds="9.015, 4.46, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1e127e19-569e-49c5-8f5f-3e6924c625ce" absoluteBounds="11.75, 4.125, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/DataBaseDataContext/TransaksiDetail" />
+      <nestedChildShapes>
+        <elementListCompartment Id="19fc3e31-0bfa-40a6-a0f1-2b1f7f17fc98" absoluteBounds="11.765, 4.585, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c12bfd7a-3cbe-41d7-ae67-164a7c095296" absoluteBounds="9, 0.75, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/DataBaseDataContext/TransaksiHeader" />
+      <nestedChildShapes>
+        <elementListCompartment Id="208dbbf5-bbd4-41fc-bc03-def43c581860" absoluteBounds="9.015, 1.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.5 : 4.82774983723958); (5.79166666666667 : 4.82774983723958 : JumpStart); (5.95833333333333 : 4.82774983723958 : JumpEnd); (6.25 : 4.82774983723958)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataBaseDataContext/Bandara/Bandara_JadwalPenerbangan" />
+      <nodes>
+        <classShapeMoniker Id="cfa1533b-ce6d-4b80-8563-7a45c94fc418" />
+        <classShapeMoniker Id="4b163602-579e-4f4f-957c-e1e43929b915" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 4.22637491861979); (5.79166666666667 : 4.22637491861979 : JumpStart); (5.95833333333333 : 4.22637491861979 : JumpEnd); (6.25 : 4.22637491861979)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataBaseDataContext/Bandara/Bandara_JadwalPenerbangan1" />
+      <nodes>
+        <classShapeMoniker Id="cfa1533b-ce6d-4b80-8563-7a45c94fc418" />
+        <classShapeMoniker Id="4b163602-579e-4f4f-957c-e1e43929b915" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 2.77089680989583); (5.875 : 3.14589680989583); (5.875 : 5.43152747200521); (6.25 : 5.43152747200521)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataBaseDataContext/Maskapai/Maskapai_JadwalPenerbangan" />
+      <nodes>
+        <classShapeMoniker Id="c3832e4b-bd09-4192-a8d0-8fa52f216f25" />
+        <classShapeMoniker Id="4b163602-579e-4f4f-957c-e1e43929b915" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 4.81814697265625); (3.5 : 4.81814697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataBaseDataContext/Negara/Negara_Bandara" />
+      <nodes>
+        <classShapeMoniker Id="0254010f-2208-47ca-830f-29fc6c209861" />
+        <classShapeMoniker Id="cfa1533b-ce6d-4b80-8563-7a45c94fc418" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 4.88544840494792); (8.72916666666667 : 4.88544840494792 : JumpStart); (8.98958333333333 : 4.88544840494792 : JumpEnd); (9 : 4.88544840494792)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataBaseDataContext/JadwalPenerbangan/JadwalPenerbangan_PerubahanStatusJadwalPenerbangan" />
+      <nodes>
+        <classShapeMoniker Id="4b163602-579e-4f4f-957c-e1e43929b915" />
+        <classShapeMoniker Id="4924ea5e-b9b0-40f1-a51b-6fa115b6aee6" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 2.44399251302083); (8.625 : 2.81899251302083); (8.625 : 4.41147220247396); (8.72916666666667 : 4.41147220247396 : JumpStart); (8.98958333333333 : 4.41147220247396 : JumpEnd); (9 : 4.41147220247396)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataBaseDataContext/StatusPenerbangan/StatusPenerbangan_PerubahanStatusJadwalPenerbangan" />
+      <nodes>
+        <classShapeMoniker Id="5140cd06-163c-4f53-a374-697765e348db" />
+        <classShapeMoniker Id="4924ea5e-b9b0-40f1-a51b-6fa115b6aee6" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11 : 1.82774983723958); (12.75 : 1.82774983723958); (12.75 : 4.125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataBaseDataContext/TransaksiHeader/TransaksiHeader_TransaksiDetail" />
+      <nodes>
+        <classShapeMoniker Id="c12bfd7a-3cbe-41d7-ae67-164a7c095296" />
+        <classShapeMoniker Id="1e127e19-569e-49c5-8f5f-3e6924c625ce" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 10.3115374615385); (8.8125 : 9.74903746153846); (8.8125 : 1.82774983723958); (8.82291666666667 : 1.82774983723958 : JumpStart); (8.98958333333333 : 1.82774983723958 : JumpEnd); (9 : 1.82774983723958)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataBaseDataContext/Akun/Akun_TransaksiHeader" />
+      <nodes>
+        <classShapeMoniker Id="eb353484-5822-47d7-b46f-be4c152c47dc" />
+        <classShapeMoniker Id="c12bfd7a-3cbe-41d7-ae67-164a7c095296" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 3.68653746153846); (8.56607443490112 : 3.37046302663734 : JumpStart); (8.68392556509888 : 3.25261189643958 : JumpEnd); (8.6875 : 3.24903746153846); (8.6875 : 2.39787675585937); (8.72916666666667 : 2.39787675585937 : JumpStart); (8.98958333333333 : 2.39787675585937 : JumpEnd); (9 : 2.39787675585937)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataBaseDataContext/JadwalPenerbangan/JadwalPenerbangan_TransaksiHeader" />
+      <nodes>
+        <classShapeMoniker Id="4b163602-579e-4f4f-957c-e1e43929b915" />
+        <classShapeMoniker Id="c12bfd7a-3cbe-41d7-ae67-164a7c095296" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 7.5317122023738); (8.75357443490112 : 7.02813776747267 : JumpStart); (8.87142556509888 : 6.91028663727492 : JumpEnd); (8.90625 : 6.8754622023738); (8.90625 : 1.25762291861979); (9 : 1.25762291861979)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataBaseDataContext/KodePromo/KodePromo_TransaksiHeader" />
+      <nodes>
+        <classShapeMoniker Id="efb7dfbc-bf41-4031-a4ed-591fcab4006b" />
+        <classShapeMoniker Id="c12bfd7a-3cbe-41d7-ae67-164a7c095296" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
